@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: bisque;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-container{
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    height: 250px;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: height 0.2s ease;
+    border: 3px solid rgb(218, 171, 113);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.qr-container.active{
+    height: 500px;
+}
+
+.heading{
+    margin-bottom: 10px;
+}
+
+.description{
+    color: #484848;
+}
+
+.qr-container_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+#qr-input{
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 550px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    padding: .5rem;
+    padding-left: .75rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#qr-submit{
+    background-color: bisque;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.qr-container_output{
+    position: relative;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-output{
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    align-items: center;
+    opacity: 0;
+    border: 1px solid #ccc;
+    padding: 2rem 0;
+    margin: 2rem auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.qr-container.active .qr-output{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.25s ease;
+}
+
+.error{
+    margin-top: 5px;
+    color: red;
+}
